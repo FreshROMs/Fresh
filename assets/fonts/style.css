@@ -1,0 +1,10 @@
+@font-face {
+   font-family: 'Animosa-ExtraBold';
+   font-display: swap;
+   src: url('Animosa-ExtraBold/font.ttf');
+}
+@font-face {
+   font-family: 'Animosa-Bold';
+   font-display: swap;
+   src: url('Animosa-Bold/font.ttf');
+}
