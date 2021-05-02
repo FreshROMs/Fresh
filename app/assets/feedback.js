@@ -27,16 +27,15 @@ window.addEventListener("DOMContentLoaded", function () {
   var form = document.getElementById("frsh_feedback_form");
   var myForm = document.getElementById("frsh_feedback_form");
   var button = document.getElementById("submit-button");
-  var status = document.getElementById("contact-form-status");
+  var status = document.getElementById("main_form");
 
   function success() {
-    form.reset();
-    button.style = "display: none ";
-    status.innerHTML = "Thanks! Contact form is submitted successfully.";
+    status.setAttribute("disabled", "disabled");
+    button.innerHTML = "Thanks! Feedback is submitted successfully.";
   }
 
   function error() {
-    status.innerHTML = "Oops! There was a problem.";
+    button.innerHTML = "Oops! There was a problem.";
   }
 
   // handle the form submission event
