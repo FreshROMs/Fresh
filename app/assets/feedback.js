@@ -7,12 +7,15 @@ function checkSelect(select) {
     disabled = document.getElementById("submitarea-disabled");
     uploadLog = document.getElementById("log-upload");
     uploadScreenshot = document.getElementById("cap-upload");
+    var button = document.getElementById("submit-button");
     if (select.value == "bug") {
         disabled.style.display = "inherit";
         infoReq.style.display = "none";
+        button.disabled = true;
     } else {
         disabled.style.display = "none";
         infoReq.style.display = "inherit";
+        button.disabled = false;
     }
 }
 
