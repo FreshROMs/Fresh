@@ -36,12 +36,12 @@ window.addEventListener("DOMContentLoaded", function () {
 
   function success() {
     status.setAttribute("disabled", "disabled");
-    button.setAttribute('content', 'Submitted successfully');
-    button.setAttribute("disabled", "disabled");
+    button.textContent = 'Submitted successfully';
+    button.disabled = true;
   }
 
   function error() {
-    button.setAttribute('content', 'Oops! There was a problem.');
+    button.textContent = 'Oops! There was a problem.';
   }
 
   // handle the form submission event
