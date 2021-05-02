@@ -17,7 +17,7 @@ function checkSelect(select) {
         disabled.style.display = "none";
         infoReq.style.display = "inherit";
         button.disabled = false;
-        button.style.display = "inherit";
+        button.style.display = "block";
     }
 }
 
