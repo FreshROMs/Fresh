@@ -37,6 +37,7 @@ window.addEventListener("DOMContentLoaded", function () {
   function success() {
     status.setAttribute("disabled", "disabled");
     button.setAttribute('content', 'Submitted successfully');
+    button.setAttribute("disabled", "disabled");
   }
 
   function error() {
