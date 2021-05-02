@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <title>Fresh Feedback</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/app/assets/app.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="/app/assets/dark.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/samsunginternet/OneUI-Web/oui-css/oui.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/brand/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16x16.png">
+    <link rel="manifest" href="/assets/brand/site.webmanifest">
+    <link rel="mask-icon" href="/assets/brand/safari-pinned-tab.svg" color="#f89f1d">
+    <link rel="shortcut icon" href="/assets/brand/favicon.ico">
+    <meta name="msapplication-TileColor" content="#f89f1d">
+    <meta name="msapplication-config" content="/assets/brand/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body>
+    <main class="container">
+      <form name="omc" method="POST" data-netlify="true" id="frsh_omc_form">
+        <fieldset id="main_form">
+          <div class="oui-interaction">
+            <div class="oui-bubble">
+              <p class="oui-overlay-bubble-item">Request for more OMCs to be tweaked!</p>
+              <ul>
+                <li class="oui-bubble-item control">
+                  <h6 class="title is-6">OMC Code</h5>
+                  <h6 class="subtitle is-6">
+                  <span class="tag is-danger is-light">Three-letter code ONLY.</span>
+                  <input class="input is-small" type="text" placeholder="Example: XTC" id="frsh_omc" name="OMC_Code" required>
+                  <i class="bar"></i>
+                  </h6>
+                </li>
+              </ul>
+            </div>
+            <div class="submit-button">
+              <button href="" id="submit-button" class="oui-button oui-button--active" type="submit" form="frsh_omc_form" maxlength="3" value="Submit">Submit</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="/app/assets/omc.js"></script>
+  </body>
+</html>
