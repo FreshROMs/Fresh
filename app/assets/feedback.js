@@ -12,10 +12,12 @@ function checkSelect(select) {
         disabled.style.display = "inherit";
         infoReq.style.display = "none";
         button.disabled = true;
+        button.style.display = "none";
     } else {
         disabled.style.display = "none";
         infoReq.style.display = "inherit";
         button.disabled = false;
+        button.style.display = "inherit";
     }
 }
 
