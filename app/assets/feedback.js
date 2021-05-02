@@ -1,30 +1,17 @@
 
-$('#log-upload').change(function() {
-    var file = $('#log-upload')[0].files[0].name;
-    $('#log-upload-text').text(file);
-});
-$('#cap-upload').change(function() {
-    var file = $('#cap-upload')[0].files[0].name;
-    $('#cap-upload-text').text(file);
-});
-
-uploadLog = document.getElementById("log-upload");
-uploadScreenshot = document.getElementById("cap-upload");
-uploadLog.required = true;
-uploadScreenshot.required = false;
+document.getElementById("submitarea-disabled").display = "none";
 
 function checkSelect(select) {
-    infoReq = document.getElementById("information-required");
+    infoReq = document.getElementById("textarea-more");
+    disabled = document.getElementById("submitarea-disabled");
     uploadLog = document.getElementById("log-upload");
     uploadScreenshot = document.getElementById("cap-upload");
     if (select.value == "bug") {
-        infoReq.style.display = "inherit";
-        uploadLog.required = true;
-        uploadScreenshot.required = false;
-    } else {
+        disabled.style.display = "inherit";
         infoReq.style.display = "none";
-        uploadLog.required = false;
-        uploadScreenshot.required = false;
+    } else {
+        disabled.style.display = "none";
+        infoReq.style.display = "inherit";
     }
 }
 
