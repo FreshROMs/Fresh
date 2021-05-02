@@ -31,14 +31,14 @@
                   <h6 class="title is-6">OMC Code</h5>
                   <h6 class="subtitle is-6">
                   <span class="tag is-danger is-light">Three-letter code ONLY.</span>
-                  <input class="input is-small" type="text" placeholder="Example: XTC" id="frsh_omc" name="OMC_Code" required>
+                  <input class="input is-small" type="text" placeholder="Example: XTC" id="frsh_omc" name="OMC_Code" maxlength="3" required oninput="let p=this.selectionStart;this.value=this.value.toUpperCase();this.setSelectionRange(p, p);">
                   <i class="bar"></i>
                   </h6>
                 </li>
               </ul>
             </div>
             <div class="submit-button">
-              <button href="" id="submit-button" class="oui-button oui-button--active" type="submit" form="frsh_omc_form" maxlength="3" value="Submit">Submit</button>
+              <button href="" id="submit-button" class="oui-button oui-button--active" type="submit" form="frsh_omc_form" value="Submit">Submit</button>
             </div>
           </fieldset>
         </form>
