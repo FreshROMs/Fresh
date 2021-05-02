@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <title>Fresh Feedback</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/app.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/samsunginternet/OneUI-Web/oui-css/oui.css">
+  </head>
+  <body>
+    <main class="container">
+      <form name="feedback" method="POST" data-netlify="true" id="frsh_feedback_form">
+        <div class="oui-interaction">
+          <div class="oui-bubble">
+            <p class="oui-overlay-bubble-item">Reporter Information</p>
+            <ul>
+              <li class="oui-bubble-item control">
+                <h6 class="title is-6">Email/Telegram/Discord</h5>
+                <h6 class="subtitle is-6">
+                <span class="tag is-danger is-light">Required so I can help you better.</span>
+                <input class="input is-small" type="text" placeholder="Email/Telegram/Discord" id="frsh_reporter" name="reporter" required>
+                <i class="bar"></i>
+                </h6>
+              </li>
+              <li class="oui-bubble-item control">
+                <h6 class="title is-6">Full Device Model</h5>
+                <h6 class="subtitle is-6">
+                <span class="tag is-danger is-light">Example: SM-A505GN</span>
+                <input class="input is-small" type="text" placeholder="Full Device Model" id="frsh_device" name="device" required>
+                <i class="bar"></i>
+                </h6>
+              </li>
+            </ul>
+          </div>
+          <div class="oui-bubble">
+            <p class="oui-overlay-bubble-item">Feedback Form</p>
+            <ul>
+              <li class="oui-bubble-item control">
+                <h6 class="title is-6">What seems to be the problem?</h5>
+                <h6 class="subtitle is-6">
+                <div class="select">
+                  <select onchange="checkSelect(this);" required>
+                    <option value="bug">I'm experiencing a bug</option>
+                    <option value="find-feature">I cannot find a feature</option>
+                    <option value="question">I have a question</option>
+                    <option value="request">I have a suggestion</option>
+                  </select>
+                </div>
+                </h6>
+              </li>
+              <li class="oui-bubble-item control">
+                <h6 class="title is-6">Please tell more about your problem.</h5>
+                <h6 class="subtitle is-6">
+                <span class="tag is-link is-light">Keep it short and concise, but meaningful.</span>
+                <textarea class="textarea" placeholder="Please tell more about your problem." required></textarea>
+                <i class="bar"></i>
+                </h6>
+              </li>
+            </ul>
+          </div>
+          <div id="information-required" class="oui-bubble">
+            <p class="oui-overlay-bubble-item">Additional Information Needed</p>
+            <ul>
+              <li class="oui-bubble-item control">
+                <h6 class="title is-6">Logcat/Kernel Messages (kmsg)</h5>
+                <h6 class="subtitle is-6">
+                <span class="tag is-danger is-light">Logs are needed to be able to determine the issue faster.</span>
+                <div class="file is-medium is-boxed has-name">
+                  <label class="file-label">
+                    <input id="log-upload" name='upload_log_img' class="file-input" type="file" name="Logs" accept=".log,last_kmsg,.txt,.zip">
+                    <span class="file-cta">
+                      <span class="file-icon">
+                        <span class="material-icons">&#xe9fc;</span>
+                      </span>
+                      <span class="file-label">
+                        Choose a file…
+                      </span>
+                    </span>
+                    <span class="file-name">
+                      <p id="log-upload-text">
+                        Upload logs here
+                      </p>
+                    </span>
+                  </label>
+                </div>
+                </h6>
+              </li>
+              <li class="oui-bubble-item control">
+                <h6 class="title is-6">Screenshot(s)</h5>
+                <h6 class="subtitle is-6">
+                <span class="tag is-link is-light">To be able to determine the issue faster.</span>
+                <div class="file is-medium is-boxed has-name">
+                  <label class="file-label">
+                    <input id="cap-upload" name='upload_cap_img' class="file-input" type="file" name="Screenshot" accept="image/*">
+                    <span class="file-cta">
+                      <span class="file-icon">
+                        <span class="material-icons">&#xe9fc;</span>
+                      </span>
+                      <span class="file-label">
+                        Choose a file…
+                      </span>
+                    </span>
+                    <span class="file-name">
+                      <p id="cap-upload-text">
+                        Upload here
+                      </p>
+                    </span>
+                  </label>
+                </div>
+                </h6>
+              </li>
+            </ul>
+          </div>
+          <div class="submit-button" id="submit-button">
+            <button href="" class="oui-button oui-button--active" type="submit" form="form1" value="Submit">Submit</button>
+            <p id="contact-form-status" class="mt-3"></p>
+          </div>
+        </form>
+      </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="../assets/feedback.js"></script>
+  </body>
+</html>
