@@ -8,8 +8,8 @@ $('#cap-upload').change(function() {
     $('#cap-upload-text').text(file);
 });
 
-infoReq = document.getElementById("information-required");
 uploadLog = document.getElementById("log-upload");
+uploadScreenshot = document.getElementById("cap-upload");
 uploadLog.required = true;
 uploadScreenshot.required = false;
 
