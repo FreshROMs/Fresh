@@ -1,5 +1,6 @@
 
-document.getElementById("submitarea-disabled").display = "none";
+disabled = document.getElementById("submitarea-disabled");
+disabled.style.display = "none";
 
 function checkSelect(select) {
     infoReq = document.getElementById("textarea-more");
