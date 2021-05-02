@@ -339,3 +339,7 @@
 .submit-button {
   display: flex;
 }
+..oui-interaction {
+    min-height: 10% !important;
+    margin-bottom: 2px !important;
+}
