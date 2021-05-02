@@ -36,11 +36,11 @@ window.addEventListener("DOMContentLoaded", function () {
 
   function success() {
     status.setAttribute("disabled", "disabled");
-    button.innerHTML = "Thanks! Feedback is submitted successfully.";
+    button.setAttribute('content', 'Submitted successfully');
   }
 
   function error() {
-    button.innerHTML = "Oops! There was a problem.";
+    button.setAttribute('content', 'Oops! There was a problem.');
   }
 
   // handle the form submission event
@@ -57,7 +57,7 @@ window.addEventListener("DOMContentLoaded", function () {
 function ajax(method, data, success, error) {
   fetch('/', {
     method: 'POST',
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    headers: { "Content-Type": "multipart/form-data" },
     body: new URLSearchParams(data).toString()
   }).then(() => success()).catch((error) => {
     console.log(error); error()})
