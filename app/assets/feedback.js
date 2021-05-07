@@ -56,7 +56,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
 // helper function for sending an AJAX request
 function ajax(method, data, success, error) {
-  fetch('/', {
+  fetch(url, {
     method: 'POST',
     mode: "no-cors",
     headers: { 'Content-Type': 'application/json' },
