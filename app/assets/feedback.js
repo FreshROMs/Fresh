@@ -56,18 +56,13 @@ window.addEventListener("DOMContentLoaded", function () {
 
 // helper function for sending an AJAX request
 function ajax(method, data, success, error) {
-  fetch(url, {
-    method: 'POST',
-    mode: "no-cors",
-    headers: { 'Content-Type': 'application/json' },
-    body: data
-  }).then(data=>{
-        console.log(data);
-        success();
-  }).catch((error) => {
-        console.log(error);
-        error();
-  })
+    $('#form').ajaxSubmit({
+        data: extraData,
+        dataType: 'jsonp',  // This won't really work. It's just to use a GET instead of a POST to allow cookies from different domain.
+        error: function () {
+            success();
+        }
+    })
 }
 
 function getInputData(){
