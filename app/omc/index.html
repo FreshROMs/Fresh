@@ -21,30 +21,38 @@
   </head>
   <body>
     <main class="container">
-      <form name="omc" method="POST" data-netlify="true" id="frsh_omc_form">
+      <form name="omc" method="POST" action="https://docs.google.com/forms/d/e/1FAIpQLScsU5IwcIKoqB2xrs_SFVAVHBl6Caw0je38p_mgKMfokd4Iqw/formResponse" target="_self" id="form">
         <fieldset id="main_form">
           <div class="oui-interaction">
             <div class="oui-bubble">
               <p class="oui-overlay-bubble-item">Request for more OMCs to be tweaked!</p>
               <ul>
                 <li class="oui-bubble-item control">
-                  <h6 class="title is-6">OMC Code</h5>
-                  <h6 class="subtitle is-6">
-                  <span class="tag is-danger is-light">Three-letter code ONLY.</span>
-                  <input class="input is-small" type="text" placeholder="Example: XTC" id="frsh_omc" name="OMC_Code" maxlength="3" required oninput="let p=this.selectionStart;this.value=this.value.toUpperCase();this.setSelectionRange(p, p);">
-                  <i class="bar"></i>
-                  </h6>
+                  <fieldset>
+                    <legend for="1938693785">
+                      <h6 class="title is-6">OMC Code</h5>
+                    </legend>
+                    <h6 class="subtitle is-6">
+                    <span class="tag is-danger is-light">Three-letter code ONLY.</span>
+                    <input class="input is-small" type="text" placeholder="Example: XTC" id="1056974599" name="entry.1056974599" maxlength="3" required oninput="let p=this.selectionStart;this.value=this.value.toUpperCase();this.setSelectionRange(p, p);">
+                    <i class="bar"></i>
+                    </h6>
+                  </fieldset>
                 </li>
               </ul>
             </div>
+            <input type="hidden" name="fvv" value="1">
+            <input type="hidden" name="fbzx" value="-8309641687188867441">
+            <input type="hidden" name="pageHistory" value="0">
             <div class="submit-button">
-              <button href="" id="submit-button" class="oui-button oui-button--active" type="submit" form="frsh_omc_form" value="Submit">Submit</button>
+              <button href="" id="submit-button" class="oui-button oui-button--active" type="submit" form="form" value="Submit">Submit</button>
             </div>
           </fieldset>
         </form>
       </div>
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
     <script src="/app/assets/omc.js"></script>
   </body>
 </html>
