@@ -2,6 +2,9 @@
 disabled = document.getElementById("submitarea-disabled");
 disabled.style.display = "none";
 
+let url = "https://docs.google.com/forms/d/e/1FAIpQLSe03Sl9Z6uFBWWQKPj22G43l3153C4FJBPh9Ow_AHYYf-d24Q/formResponse"; //action url
+let form = document.querySelector("#form"); //form element
+
 function checkSelect(select) {
     infoReq = document.getElementById("textarea-more");
     disabled = document.getElementById("submitarea-disabled");
@@ -41,7 +44,11 @@ window.addEventListener("DOMContentLoaded", function () {
   if (form != null) {
     form.addEventListener("submit", function (ev) {
       ev.preventDefault();
-      var data = new FormData(form);
+      var data = new FormData();
+      data.append("entry.1811482587", document.querySelector("#frsh_reporter").value);
+      data.append("entry.1172745133", document.querySelector("#frsh_device").value);
+      data.append("entry.698861321", document.querySelector("#feedback_selection").value);
+      data.append("entry.1702090977", document.querySelector("#information").value);
       ajax(form.method, data, success, error);
     });
   }
@@ -51,8 +58,23 @@ window.addEventListener("DOMContentLoaded", function () {
 function ajax(method, data, success, error) {
   fetch('/', {
     method: 'POST',
-    headers: { "Content-Type": "multipart/form-data" },
-    body: new URLSearchParams(data).toString()
-  }).then(() => success()).catch((error) => {
-    console.log(error); error()})
+    mode: "no-cors",
+    headers: { 'Content-Type': 'application/json' },
+    body: data
+  }).then(data=>{
+        console.log(data);
+        success();
+  }).catch((error) => {
+        console.log(error);
+        error();
+  })
+}
+
+function getInputData(){
+    let dataToPost = new FormData(); //formdata API
+
+    //fill name attributes to corresponding values
+    dataToPost.append("entry.294341084", document.querySelector("#inp1").value);
+
+    return dataToPost;
 }
