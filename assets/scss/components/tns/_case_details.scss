@@ -1,0 +1,134 @@
+.case-details {
+  padding: 200px 0 100px 0;
+  .svg-img {
+    position: absolute;
+    top: 30%;
+    left: -7%;
+    animation: move_top 5s infinite linear;
+    @include desktop {
+      display: none;
+    }
+  }
+  .animate-shape {
+    position: absolute;
+    top: 29%;
+    right: 4%;
+    height: 300px;
+    width: 300px;
+    svg {
+      width: 100%;
+    }
+    @include desktop {
+      display: none;
+    }
+  }
+  .animate-pattern {
+    position: absolute;
+    top: 46%;
+    right: 12%;
+    height: 100px;
+    width: 100px;
+    animation: move_top 3s infinite linear;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+    @include desktop {
+      display: none;
+    }
+  }
+  &-info {
+    display: flex;
+    justify-content: space-around;
+    background: $secondary;
+    border-radius: 20px;
+    padding: 65px 0;
+    margin: 70px 0 80px 0;
+    @include mobile {
+      flex-direction: column;
+      padding: 30px 0;
+    }
+    .case-details-info-item {
+      position: relative;
+      &:not(:last-child) {
+        &::before {
+          position: absolute;
+          content: "";
+          width: 1px;
+          height: 100%;
+          top: 0;
+          right: -80px;
+          background: rgba($color: $white, $alpha: 0.4);
+          @include desktop {
+            right: -45px;
+          }
+          @include tablet {
+            right: -15px;
+          }
+          @include mobile {
+            display: none;
+          }
+        }
+        @include mobile {
+          margin-bottom: 30px;
+        }
+      }
+    }
+    h5 {
+      color: $light;
+    }
+    p {
+      margin: 0;
+      color: rgba($color: $white, $alpha: 0.7);
+    }
+  }
+  &-thumb {
+    border-radius: 30px;
+    overflow: hidden;
+    img {
+      height: 100%;
+      max-width: 100%;
+      border-radius: 20px;
+    }
+  }
+  &-nav {
+    .previous,
+    .next {
+      .icon {
+        line-height: 0;
+      }
+      .content {
+        span {
+          display: block;
+        }
+        h5 {
+          font-size: 20px;
+          margin: 0;
+        }
+      }
+    }
+
+    .social {
+      @include mobile {
+        display: none;
+      }
+      ul {
+        li {
+          list-style: none;
+          display: inline-block;
+          a {
+            color: $body-color;
+            display: block;
+            transition: all 0.3s ease;
+            &:hover {
+              color: $primary;
+            }
+          }
+          &:not(:last-child) {
+            margin-right: 25px;
+          }
+        }
+      }
+    }
+  }
+}

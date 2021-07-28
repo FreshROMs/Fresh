@@ -1,0 +1,49 @@
+baseURL = "https://fresh.tensevntysevn.cf"
+languageCode = "en-us"
+title = "Fresh | tensevntysevn"
+
+[params]
+copyright = "© John Vincent - 2021"
+footerLogo = "/assets/images/widget-logo.png"
+
+[params.brand]
+logo = "/assets/logo.svg"
+color = "/assets/logo-color.svg"
+navbar = "/assets/navbar-logo.svg"
+copyright = "2021 tensevntysevn"
+
+# Sitemap Menu
+[[menu.sitemap]]
+name = "Server Status"
+url = "https://status.tensevntysevn.cf/"
+weight = 1
+[[menu.sitemap]]
+name = "Code of Conduct"
+url = "ethics"
+weight = 2
+[[menu.sitemap]]
+name = "Privacy Policy"
+url = "privacy"
+weight = 3
+
+[params.address]
+address = "Manila, Philippines"
+email = "kamusta@tensevntysevn.cf"
+github = "TenSeventy7"
+telegram = "TenSeventy7"
+
+# Social icons
+[[params.social]]
+icon = "fa-telegram"
+url = "https://www.facebook.com/"
+weight = 1
+[[params.social]]
+icon = "fa-discord"
+url = "https://www.linkedin.com/"
+weight = 2
+[[params.social]]
+icon = "fa-twitter-square"
+url = "https://twitter.com/"
+weight = 3
+
+

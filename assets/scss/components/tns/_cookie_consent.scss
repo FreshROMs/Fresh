@@ -1,0 +1,114 @@
+
+.cc_dialog {
+  position: fixed !important;
+  padding: 2rem 8rem !important;
+
+  @include tablet {
+    padding: 1rem 2rem !important;
+  }
+
+  box-shadow: 0 4px 7px -2px rgba(0,0,0,0.3) !important;
+}
+
+.cc_dialog_headline {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 700 !important;
+  margin-bottom: 12px;
+
+  @include tablet {
+    display: none !important;
+  }
+}
+
+.cc_dialog_text {
+  font-family: "Manrope", sans-serif !important;
+  margin: 0 24px;
+  font-weight: 500 !important;
+}
+
+.cc_b_ok {
+  border-radius: 6px !important;
+  background: #1B4079 !important;
+  font-family: "Manrope", sans-serif !important;
+  font-weight: 600 !important;
+  margin-right: 8px !important;
+  margin-top: 12px !important;
+}
+
+.cc_b_cp {
+  border-radius: 6px !important;
+  background: #04A777 !important;
+  color: #fff !important;
+  font-family: "Manrope", sans-serif !important;
+  font-weight: 600 !important;
+  margin-top: 12px !important;
+}
+
+
+.cc_cp_container {
+  border-radius: 20px !important;
+
+  h1,h2,h3,h4 {
+    font-family: "Poppins", sans-serif !important;
+    font-weight: 700 !important;
+  }
+
+  p {
+    font-family: "Manrope", sans-serif !important;
+    margin: 0 12px;
+    font-weight: 500 !important;
+  }
+}
+
+.cc_cp_m_menu {
+  li {
+    a {
+      font-family: "Poppins", sans-serif !important;
+      font-weight: 500 !important;
+    }
+  }
+}
+
+.cc_cp_head {
+  border-radius: 20px !important;
+  padding: 8px 12px !important;
+  border-bottom: 0px solid #ccc !important;
+}
+
+.cc_cp_head_lang_selector select {
+    display: none;
+}
+
+.cc_cp_footer {
+  border-bottom-right-radius: 20px !important;
+  border-bottom-left-radius: 20px !important;
+  padding: 0 12px !important;
+}
+
+.div_checkbox_cookie_consent {
+  label {
+    font-family: "Poppins", sans-serif !important;
+    font-weight: 500 !important;
+  }
+}
+
+.cc_cp_f_save button {
+  border-radius: 6px !important;
+  background: #1B4079 !important;
+  font-family: "Manrope", sans-serif !important;
+  font-weight: 600 !important;
+}
+
+.cookie-consent-preferences-overlay input[type="checkbox"].checkbox_cookie_consent:checked+label:before {
+    background: #04A777 !important;
+}
+
+.cc_cp_f_powered_by {
+  user-select: none !important;
+  color: transparent !important;
+
+  a {
+    color: transparent !important;
+    display: none !important;
+  }
+}

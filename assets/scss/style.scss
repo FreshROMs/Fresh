@@ -1,0 +1,332 @@
+/*! bulma.io v0.9.3 | MIT License | github.com/jgthms/bulma */
+@import "fonts";
+@import "https://unpkg.com/bulmaswatch/cosmo/bulmaswatch.min.css";
+@import "bulma";
+@import "site";
+@import "tns";
+
+html {
+  scroll-behavior: smooth;
+}
+
+:target:before {
+  content: "";
+  display: block;
+  height: 100px;
+  margin: -100px 0 0;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Animosa Bold';
+}
+
+div .card {
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  margin: 50px auto;
+}
+
+.tiny {
+  font-size: 1.25em !important;
+}
+
+.navbar {
+  font-family: 'Animosa Regular';
+  font-size: 1.1rem;
+  padding: 10px 10vw;
+  color: white;
+
+  background-color: rgba(255, 255, 255, 0.0);
+  backdrop-filter: blur(0px) saturate(100%);
+  border: 1px solid rgba(209, 213, 219, 0.0);
+  transition: background-color 0.5s, backdrop-filter 0.5s;
+}
+
+.nav-colored {
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+.navbar-brand {
+  @media(max-width: 768px) {
+    margin: auto;
+  }
+}
+
+.navbar-item {
+  color: rgba(255, 255, 255, 0.9);
+  transition: color 0.25s;
+}
+
+.navbar-item img {
+  max-height: 5rem;
+  padding-right: 1vw;
+}
+
+.hero {
+  background: url("/assets/images/hero-background.png"), linear-gradient(0deg, #ff5858 0%, #f09819 100%);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: cover;
+}
+
+.section-title {
+  padding-top: 2vh;
+  margin-bottom: 8vh;
+
+  .title.is-1 {
+    font-size: 4rem;
+    opacity: 0.7;
+
+    @media(max-width: 768px) {
+      font-size: 3rem;
+    }
+  }
+
+  .subtitle {
+    margin-top: 0.5rem;
+    opacity: 0.5
+  }
+}
+
+.section-title-large-top {
+  padding-top: 0;
+  margin-top: -8vh;
+  margin-bottom: 12vh;
+}
+
+.section-screenshots {
+  background-image: linear-gradient(0deg, #2af598 0%, #4481eb 100%);
+
+  .container {
+    padding: 0 10vw;
+
+    @media(max-width: 768px)  {
+      padding: 0;
+    }
+  }
+
+  .hero-body {
+    padding: 0 !important;
+    padding-bottom: 8rem !important;
+  }
+
+  .hero-image {
+    width: 20vw;
+    height: auto;
+    margin: auto;
+
+    @media(max-width: 768px)  {
+      width: 60%;
+    }
+  }
+
+  .slider-item * {
+    overflow-x: hidden;
+  }
+}
+
+.section-downloads {
+  background-image: linear-gradient(0deg, #f09819 0%, #2af598 100%);
+}
+
+.section-support {
+  background-image: linear-gradient(0deg, #c43a30 0%, #f09819 100%);
+
+  .hero-body {
+    padding: 4rem 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
+
+.section-community {
+  background-image: linear-gradient(0deg, #874da2 0%, #c43a30 100%);
+
+  .hero-body {
+    padding: 10rem 0 !important;
+    padding-top: 4rem !important;
+  }
+}
+
+.hero-title-div {
+  padding: 75px 0 75px 100px;
+}
+
+@media(max-width: 768px) {
+  .hero-title-div {
+    padding: 50px !important;
+  }
+
+  .hero-body {
+    padding-bottom: 0;
+  }
+}
+
+.hero-image {
+  width: 18vw;
+  height: auto;
+  margin: auto;
+
+  @media(max-width: 768px) {
+    width: 70%;
+    margin-bottom: 0;
+    margin-top: 4vw;
+  }
+}
+
+.hero-layout {
+  padding-top: 9vh;
+}
+
+.hero-title, .hero.is-link .title {
+  font-family: 'Animosa Extra Bold';
+  color:rgba(255, 255, 255, 0.9);
+  font-size: 5rem;
+}
+
+.hero-subtitle {
+  font-family: 'Animosa Bold';
+  font-size: 1.2rem;
+  color:rgba(255, 255, 255, 0.5) !important;
+}
+
+.feature-text-center {
+  text-align: center;
+  margin: auto;
+}
+
+.feature-header {
+  margin-bottom: 10px;
+  font-size: 4rem;
+  opacity: 0.7;
+
+  @media(max-width: 768px)  {
+    font-size: 3rem;
+    padding: 4vw 4vw;
+    padding-bottom: 0;
+    margin-bottom: 4px;
+  }
+}
+
+.feature-text {
+  width: 600px;
+  font-size: 1.1em;
+  font-weight: 500;
+  line-height: 1.35em;
+  padding: 10px 0;
+
+  @media(max-width: 768px)  {
+    max-width: 400px;
+    font-size: 1em;
+    padding: 4vw 4vw;
+  }
+}
+
+.feature-byline {
+  font-weight: 600;
+}
+
+.feature-notes {
+  font-size: 0.8em;
+  opacity: 0.5;
+}
+
+.button {
+  backdrop-filter: blur(0px) saturate(100%);
+  transition: background-color 0.5s;
+}
+
+#twitter-feed {
+  padding-bottom: 0;
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20vh);
+  visibility: hidden;
+  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+  will-change: opacity, visibility;
+}
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
+.spaced-button {
+  margin: 6vw 6vw;
+}
+
+.faq-question-card {
+  margin: 1vw 10vw !important;
+  border: 0;
+  box-shadow: 0 0 0 0px #dbdbdb;
+
+  @media(max-width: 768px)  {
+    margin: 3vw 6vw !important;
+  }
+}
+
+.faq-question-header {
+  padding: 1vw 1.75vw;
+
+  @media(max-width: 768px)  {
+    padding: 2vw 2vw;
+  }
+
+  h1 {
+    font-size: 1.5em;
+
+    @media(max-width: 768px)  {
+      font-size: 1.3em;
+    }
+  }
+}
+
+.faq-question-content {
+  background-color: white;
+  border-radius: 12px;
+  margin: 0;
+}
+
+.faq-question-message {
+  padding: 1.25em 1.75vw;
+}
+
+
+.social-card {
+  margin: 0 25vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media(max-width: 768px)  {
+    margin: 0 8vw;
+  }
+
+  .social-card-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 4vh;
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    figure {
+      margin-right: 24px;
+    }
+  }
+
+}
+
+.tease {
+  color: #fff;
+}
+
+.button:hover {
+  text-decoration: none !important;
+}

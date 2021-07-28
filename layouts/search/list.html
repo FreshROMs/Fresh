@@ -1,0 +1,76 @@
+{{ define "main" }}
+<nav class="navbar is-transparent search-results-navbar">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <img src="{{.Site.Params.brand.navbar | absURL }}" class="navbar-logo">
+    </a>
+    <div class="go-header-search">
+      <form id="go-search-header" method="get" action="/search">
+        <div class="field has-addons ml-4">
+          <div class="control has-icons-right is-expanded">
+            <input type="text" name="gp-search" id="gp-search" class="input is-primary is-rounded" placeholder="Search on Google">
+          </div>
+          <p class="control">
+            <a href="#" onclick="document.getElementById('go-search-header').submit()" class="button is-rounded is-primary">
+              <span class="icon is-small is-right">
+                <i class="fas fa-search"></i>
+              </span></a>
+            </p>
+          </div>
+        </form>
+      </div>
+    <span class="navbar-burger navbar-burger-header has-text-dark burger" data-target="appMenuHeader" data-caption="appMenuCaption">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+  </div>
+  <div id="appMenuHeader" class="m-fadeOut go-sites-menu card">
+    {{ partial "components/appmenu.html" . }}
+  </div>
+</nav>
+<section class="section go-header-search-mobile-container">
+  <div class="container">
+    <div class="go-header-search-mobile">
+      <form id="go-search-header-mobile" method="get" action="/search">
+        <div class="field has-addons ml-4">
+          <div class="control has-icons-right is-expanded">
+            <input type="text" name="gp-search" id="gp-search-mobile" class="input is-primary is-rounded" placeholder="Search on Google">
+          </div>
+          <p class="control">
+            <a href="#" onclick="document.getElementById('go-search-header-mobile').submit()" class="button is-rounded is-primary">
+              <span class="icon is-small is-right">
+                <i class="fas fa-search"></i>
+              </span></a>
+            </p>
+          </div>
+        </form>
+      </div>
+  </div>
+</section>
+<section class="section search-results-section">
+	<div class="container search-results-container">
+		<div class="gcse-searchresults-only"></div>
+	</div>
+</section>
+
+<script>	
+	function queryString(str) {
+
+	    hu = window.location.search.substring(1);
+	    gy = hu.split("&");
+
+	    for (i=0;i<gy.length;i++) {
+	        ft = gy[i].split("=");
+	        if (ft[0] == str) {
+	            return ft[1];
+	        }
+	    }
+	}
+    var searchStr = queryString("gp-search");
+    var searchInp = searchStr.replace(/\+/g,' ');
+    document.getElementById('gp-search').value = searchInp;
+    document.getElementById('gp-search-mobile').value = searchInp;
+</script>
+<script async src="https://cse.google.com/cse.js?cx=001897873025161475197:apz4eywrqv0"></script>
+{{ end }}

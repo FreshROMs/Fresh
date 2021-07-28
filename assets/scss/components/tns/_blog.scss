@@ -1,0 +1,68 @@
+.blog-page {
+	&__item {
+		position: relative;
+		margin-bottom: 180px;
+		&-thumb {
+			width: 90%;
+			height: 100%;
+			overflow: hidden;
+			border-radius: 20px;
+			@include desktop {
+				width: 80%;
+				margin: 0 auto;
+			}
+			img {
+				height: 100%;
+				width: 100%;
+				transition: all 0.3s ease;
+			}
+		}
+		&-content {
+			position: absolute;
+			bottom: -100px;
+			left: 40px;
+			padding: 30px;
+			border-radius: 20px;
+			box-shadow: 0px 20px 40px 0px rgba(50, 65, 141, 0.12);
+			@include desktop {
+				left: 0;
+			}
+			span {
+				color: $primary;
+				margin: 0 0 20px 40px;
+				position: relative;
+				display: block;
+				line-height: 1;
+				&::before {
+					position: absolute;
+					content: "";
+					top: 50%;
+					left: -40px;
+					height: 1px;
+					width: 20px;
+					background: $secondary;
+					transform: translateY(-50%);
+				}
+			}
+		}
+		&:hover {
+			.blog-page__item-thumb img {
+				transform: scale(1.1);
+			}
+		}
+		.blog-page__item-thumb img {
+				height: 25vw;
+				object-fit: cover;
+		}
+	}
+}
+
+.blog-img {
+	height: 24vw;
+	margin: 0 8px;
+}
+
+.disabled {
+    pointer-events:none; //This makes it not clickable
+    opacity:0.6;         //This grays it out to look disabled
+}

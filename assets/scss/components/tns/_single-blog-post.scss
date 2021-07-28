@@ -1,0 +1,95 @@
+.section {
+    @include desktop {
+        padding: 50px 0;
+    }
+    .svg-img {
+        position: absolute;
+        top: 30%;
+        left: -7%;
+        animation: move_top 5s infinite linear;
+        @include desktop {
+            display: none;
+        }
+    }
+    .animate-shape {
+        position: absolute;
+        top: 29%;
+        right: 4%;
+        height: 300px;
+        width: 300px;
+        svg {
+            width: 100%;
+        }
+        @include desktop {
+            display: none;
+        }
+    }
+    .animate-pattern {
+        position: absolute;
+        top: 46%;
+        right: 12%;
+        height: 100px;
+        width: 100px;
+        animation: move_top 3s infinite linear;
+        img {
+            height: 100%;
+            width: 100%;
+        }
+        @include desktop {
+            display: none;
+        }
+    }
+    .singleBlog {
+        &__feature {
+            margin: 0 100px;
+            @include desktop {
+                margin: 0;
+            }
+            img {
+                height: 100%;
+                width: 100%;
+                border-radius: 20px;
+            }
+        }
+        &__content {
+            margin: 0 100px 0 100px;
+            @include desktop {
+                margin: 0;
+            }
+            .blog-section {
+                img {
+                    float: right;
+                    @include tablet {
+                        margin: auto;
+                        width: 90vw;
+                        height: 90vw;
+                        object-fit: cover;
+                        float: none;
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.blog-content {
+    h1, h2, h3, h4, h5, p, span {
+        font-family: "Manrope", sans-serif;
+    }
+
+    h1, h2, h3, h4, h5 {
+        font-weight: 800;
+        margin: 32px 0 8px 0;
+    }
+
+    p {
+        font-weight: 500;
+        color: #343434;
+        margin: 12px 0;
+    }
+}
+
+.blog-title {
+    overflow-x: hidden;
+}

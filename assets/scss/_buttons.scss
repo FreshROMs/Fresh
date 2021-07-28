@@ -1,0 +1,41 @@
+// .btn {
+//   transition: all 0.3s ease;
+//   padding: 20px 50px;
+//   border-radius: 7px;
+//   &:hover {
+//     box-shadow: 0 8px 20px rgba(56, 87, 241, 0.3);
+//     transform: scale(1.03);
+//   }
+// }
+
+// Button Override
+.btn {
+  display: inline-block;
+  padding: 15px 28px;
+  font-size: 16px;
+  border-radius: 7px;
+}
+
+.btn-lg {
+  padding: 15px 40px;
+}
+
+.btn-outline-purple {
+    @include button-outline-variant(#6e5494, #fff, lighten(#6e5494,5%), #6e5494);
+}
+
+.btn-light {
+  color: $primary;
+  &:hover {
+    color: $primary;
+  }
+}
+
+.btn-zoom {
+  transition: all 0.3s ease;
+  transform: scale(1);
+  &:hover {
+    box-shadow: 0 8px 20px rgba(56, 87, 241, 0.3);
+    transform: scale(1.03);
+  }
+}
