@@ -2,8 +2,8 @@
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
     {{- partial "head.html" . -}}
     <body>
+        {{- partial "header.html" . -}}
         <div id="wrapper" class="has-text-centered-mobile">
-            {{- partial "header.html" . -}}
             {{- block "main" . }}{{- end }}
             {{- partial "footer.html" . -}}
             {{- partial "javascript.html" . -}}

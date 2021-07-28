@@ -48,7 +48,7 @@ docReady(function() {
   });
 
   if (isMobile) {
-    scrollAnimOffset = 10;
+    scrollAnimOffset = 30;
   }
 
   AOS.init({

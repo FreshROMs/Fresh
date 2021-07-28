@@ -7,6 +7,11 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden !important;
+}
+
+a {
+  color: #303030;
 }
 
 :target:before {
@@ -195,6 +200,12 @@ div .card {
 .feature-text-center {
   text-align: center;
   margin: auto;
+
+  @media(max-width: 768px)  {
+    width: 75vw !important;
+    max-width: 75vw;
+    padding: 2vw 2vw !important;
+  }
 }
 
 .feature-header {
@@ -218,7 +229,8 @@ div .card {
   padding: 10px 0;
 
   @media(max-width: 768px)  {
-    max-width: 400px;
+    width: 90vw;
+    max-width: 90vw;
     font-size: 1em;
     padding: 4vw 4vw;
   }
@@ -253,6 +265,10 @@ div .card {
   opacity: 1;
   transform: none;
   visibility: visible;
+}
+
+.carousel {
+  overflow-x: hidden;
 }
 
 .spaced-button {
