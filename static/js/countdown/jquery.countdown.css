@@ -1,0 +1,25 @@
+ul#timer {
+	list-style: none;
+	margin: 50px 0;
+	padding: 0;
+	display: block;
+	text-align: center;
+}
+ul#timer li {
+	display: inline-block;
+}
+ul#timer li span {
+	font-size: 30px;
+	font-weight: 600;
+	line-height: 30px;
+}
+ul#timer li.seperator {
+	font-size: 30px;
+	line-height: 28px;
+	vertical-align: top;
+}
+ul#timer li p {
+	color: #a7abb1;
+        margin-top: 10px;
+	font-size: 13px;
+}
