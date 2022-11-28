@@ -1,131 +1,498 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
+        <!-- Required meta tags -->
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Fresh</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--Bootstrap 4-->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/fresh.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-        <!--icons-->
-        <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
-        <link rel="stylesheet" href="js/countdown/jquery.countdown.css" />
+        <meta name="description" content="Love your phone again. Fresh is a One UI-based custom firmware for Samsung devices." /> 
 
-        <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
-        <link rel="manifest" href="images/icons/site.webmanifest">
-        <link rel="mask-icon" href="images/icons/safari-pinned-tab.svg" color="#f2960c">
-        <link rel="shortcut icon" href="images/icons/favicon.ico">
+        <!-- The page supports both dark and light color schemes,
+             and the page author prefers / default is light. -->
+        <meta name="color-scheme" content="light dark">
+
+        <!--vendors styles-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/brands.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/regular.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+
+        <!-- Branding -->
+        <link rel="stylesheet" href="assets/stylesheets/brand.css">
+        <link rel="stylesheet" href="assets/stylesheets/outfit.css">
+
+        <!-- Bootstrap CSS / Color Scheme -->
+        <link rel="stylesheet" href="/assets/stylesheets/main.css">
+        <link rel="stylesheet" href="/assets/stylesheets/dark.css">
+
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/sitedata/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/sitedata/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/sitedata/favicon-16x16.png">
+        <link rel="manifest" href="assets/sitedata/site.webmanifest">
+        <link rel="mask-icon" href="assets/sitedata/safari-pinned-tab.svg" color="#f2960c">
+        <link rel="shortcut icon" href="assets/sitedata/favicon.ico">
         <meta name="msapplication-TileColor" content="#f2960c">
-        <meta name="msapplication-config" content="images/icons/browserconfig.xml">
+        <meta name="msapplication-config" content="assets/sitedata/browserconfig.xml">
         <meta name="theme-color" content="#f2960c">
+
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-HYZ8GKWP5C"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-HYZ8GKWP5C');
+        </script>
     </head>
     <body>
-        <!--hero section-->
-        <section class="bg-white hero p-0">
-            <div class="container-fluid">
+
+        <!--hero header-->
+        <section class="py-5 py-md-7" id="home">
+            <div class="container">
                 <div class="row">
-                    <div class="col-sm-5 bg-light text-center col-fixed">
-                        <h1 class="pt-4 h2">
-                            <img class="img-fluid" src="images/Logo_Main.svg" style="width: 172pt;" />
+                    <div class="col-md-6 my-md-auto mb-5 mb-md-0 text-center text-md-left">
+                        <span class="text-uppercase text-muted small-xl">
+                            <img class="img-fluid" src="/assets/images/fresh_brand_main.svg" style="width: 6em;" />
+                        </span>
+                        <h1 class="display-4 mt-2 mb-5">                        
+                            <img class="img-fluid" src="/assets/images/fresh_brand_tagline.svg" style="width: 12em;" />
                         </h1>
-                        <img class="img-fluid" src="images/Tagline.svg" style="width: 172pt;" />
-                        <p class="mt-4">
-                            The awesome is becoming even <br/><span style="font-weight: 600;">more awesome</span>.
-                        </p>
-                        <div class="launch-text">Coming this <span style="font-weight: 600;">9th December</span>.</div>
-                        <ul id="timer">
-                            <li><span class="days">00</span><p class="days_text">Days</p></li>
-                            <li class="seperator">:</li>
-                            <li><span class="hours">00</span><p class="hours_text">Hours</p></li>
-                            <li class="seperator">:</li>
-                            <li><span class="minutes">00</span><p class="minutes_text">Minutes</p></li>
-                            <li class="seperator">:</li>
-                            <li><span class="seconds">00</span><p class="seconds_text">Seconds</p></li>
-                        </ul>
-
-                        <!--footer-->
-                        <section>
-                            <div class="container">
-                                <div class="row mr-5 ml-5">
-                                    <div class="col-sm-12">
-                                        <p class="text-muted text-center">
-                                            2022 The Fresh Project
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
+                        <a href="#download" class="btn btn-primary d-inline-flex flex-row align-items-center">
+                            <em data-feather="download-cloud" width="20" height="20" class="mr-2"></em>
+                            Get Fresh
+                        </a>
+                        <a href="https://wiki.fresh.tenseventyseven.cf" class="btn btn-secondary d-md-inline-flex flex-row align-items-center d-none ml-3">
+                            <em data-feather="book" width="20" height="20" class="mr-2"></em>
+                            Visit the wiki
+                        </a>
                     </div>
-                    <div class="col-sm-7 offset-sm-5 px-0 py-5">
-                        <section class="pt-4">
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-sm-8 mx-auto text-center">
-                                        <h2 class="text-yellow pb-3">What's New on Fresh 4</h2>
-                                        <p class="text-muted">
-                                            Here's the things you might want to be excited for.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="row d-md-flex mt-4">
-                                    <div class="col-sm-4 mt-2 text-center">
-                                        <p><ion-icon class="text-yellow icon-md" name="logo-android"></ion-icon></em></p>
-                                        <h4>One UI 4</h4>
-                                        <p class="text-muted">Fresh 4 brings the wonder of One UI 4 and Android 12 to your device, with all the Fresh goodies to boot.</p>
-                                    </div>
-                                    <div class="col-sm-4 mt-2 text-center">
-                                        <p><ion-icon class="text-yellow icon-md" name="cog-outline"></ion-icon></em></p>
-                                        <h4>More Powerful</h4>
-                                        <p class="text-muted">Powered by Mint Kernel 12, Fresh 4 is the fastest, most powerful Fresh ever.</p>
-                                    </div>
-                                    <div class="col-sm-4 mt-2 text-center">
-                                        <p><ion-icon class="text-yellow icon-md" name="color-palette-outline"></ion-icon></em></p>
-                                        <h4>More Customizable</h4>
-                                        <p class="text-muted">Fresh 4 brings even more customization options to make your phone truly yours.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!--contact-->
-                        <section class="p-0" id="contact">
-                            <div class="container-fluid">
-                                <div class="row d-md-flex text-primary text-center">
-                                    <a class="col-sm-4 p-5" href="https://discord.gg/AfV5VWDCDD">
-                                        <div>
-                                            <p><ion-icon class="text-yellow icon-md" name="logo-discord"></ion-icon></p>
-                                            <h5 class="text-yellow">Join the Community</h5>
-                                        </div>
-                                    </a>
-                                    <a class="col-sm-4 p-5" href="https://github.com/FreshROMs">
-                                        <div>
-                                            <p><ion-icon class="text-yellow icon-md" name="logo-github"></ion-icon></p>
-                                            <h5 class="text-yellow">FreshROMs</h5>
-                                        </div>
-                                    </a>
-                                    <a class="col-sm-4 p-5" href="https://twitter.com/TenSeventy7">
-                                        <div>
-                                            <p><ion-icon class="text-yellow icon-md" name="logo-twitter"></ion-icon></p>
-                                            <h5 class="text-yellow">TenSeventy7</h5>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </section>
+                    <div class="col-md-6 play-wrapper">
+                        <img src="/assets/images/Main.png" class="img-fluid d-block mx-auto" alt="MacBook" />
+                        <!-- <div class="play d-flex flex-row align-item-center show-video">
+                            <em class="icon" data-feather="play"></em>
+                        </div> -->
                     </div>
                 </div>
             </div>
         </section>
 
-        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-        <script src="js/countdown/jquery.countdown.min.js"></script>
+        <div class="row mt-2">
+            <div class="col-md-6 mb-6 mx-auto text-center">
+                <h2 class="font-weight-bold font-brand mb-2">Fresh 4 is now available</h2>
+                <p class="text-uppercase text-muted small-xl mb-4">It's time to love your phone again.</p>
+                <a href="https://tenseventyseven.cf/fresh-4-love-your-phone-again" class="btn btn-outline-primary page-scroll">
+                    <i class="fa-regular fa-sun mr-2"></i>
+                    See what's new
+                </a>
+            </div>
+        </div>
+
+        <!-- features section -->
+        <section class="py-6" id="features">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 mx-auto">
+                        <h2 class="font-brand font-weight-bold dot-circle">There's a lot to love on Fresh.</h2>
+                        <div class="row mt-6">
+                            <div class="col-sm-6 mb-5">
+                                <div class="media">
+                                    <div class="icon-box mt-0 ml-0">
+                                        <div class="icon-box-inner small-xs text-primary">
+                                            <span data-feather="smartphone" width="30" height="30"></span>
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <h5 class="font-brand mt-0">Easy to switch to</h5>
+                                        <span class="text-description">With an easy-to-use <span class="text-muted">install wizard</span> and support for <span class="text-muted">over-the-air software updates</span>, Fresh is easy to install to your needs and update as needed.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 mb-5">
+                                <div class="media">
+                                    <div class="icon-box mt-0 ml-0">
+                                        <div class="icon-box-inner small-xs text-primary">
+                                            <span data-feather="zap" width="30" height="30"></span>
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <h5 class="font-brand mt-0">Optimized by you</h5>
+                                        <span class="text-description">Powered by <span class="text-muted">Mint Kernel</span> and machine learning, Fresh adapts to you; optimizing performance and battery life as you use your phone.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 mb-5">
+                                <div class="media">
+                                    <div class="icon-box mt-0 ml-0">
+                                        <div class="icon-box-inner small-xs text-primary">
+                                            <span data-feather="command" width="30" height="30"></span>
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <h5 class="font-brand mt-0">Flagship-class features</h5>
+                                        <span class="text-description">From <span class="text-muted">camera features</span> to <span class="text-muted">life improvements</span>, Fresh brings features you're going to see for the first time on your phone.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 mb-5">
+                                <div class="media">
+                                    <div class="icon-box mt-0 ml-0">
+                                        <div class="icon-box-inner small-xs text-primary">
+                                            <span data-feather="loader" width="30" height="30"></span>
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <h5 class="font-brand mt-0">Delightfully customizable</h5>
+                                        <span class="text-description">Fresh includes its customization center <span class="text-muted">Zest</span> and supports <span class="text-muted">Magisk</span> and <span class="text-muted">Zygisk</span> so you can install and customize your phone to your heart's content.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 mb-5">
+                                <div class="media">
+                                    <div class="icon-box mt-0 ml-0">
+                                        <div class="icon-box-inner small-xs text-primary">
+                                            <span data-feather="github" width="30" height="30"></span>
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <h5 class="font-brand mt-0">Open source</h5>
+                                        <span class="text-description">From Fresh's <span class="text-muted">first-party apps</span> to its <span class="text-muted">infrastructure</span>, you can easily check and trust what's going on. See the repositories <a href="https://github.com/FreshROMs">here</a>.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 mb-5">
+                                <div class="media">
+                                    <div class="icon-box mt-0 ml-0">
+                                        <div class="icon-box-inner small-xs text-primary">
+                                            <span data-feather="users" width="30" height="30"></span>
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <h5 class="font-brand mt-0">An awesome community</h5>
+                                        <span class="text-description">Fresh is a growing community of <span class="text-muted">users</span>, <span class="text-muted">contributors</span>, and <span class="text-muted">developers</span> doing amazing things on Fresh and making it better.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-6">
+                    <div class="col-md-6 mx-auto text-center">
+                        <h2 class="font-weight-bold font-brand mb-2">Jump in to the Community</h2>
+                        <p class="text-uppercase text-muted small-xl mb-4">Welcome home.</p>
+                        <a href="https://discord.gg/AfV5VWDCDD" class="btn btn-outline-info page-scroll">
+                            <i class="fa-brands fa-discord mr-2"></i>
+                            Join Us on Discord
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- about / reviews section -->
+        <section class="pb-6" id="about">
+            <div class="container">
+                <hr class="mt-5"/>
+
+                <div class="row my-5">
+                    <div class="col-md-6 order-2 order-md-1 my-md-auto">
+                        <h2 class="font-weight-light font-brand">Your phone, <b class="font-weight-bold">more awesome</b></h2>
+                        <p class="text-description">
+                            From an intuitive install wizard to the features you have only seen on a new device, Fresh brings a lot to the table in making your device even more awesome. Plus, with an optimized system and kernel, you'll never have to worry about missing out again.
+                            </br></br>
+                            With Color Palette, Zygisk, and customization features more akin to an AOSP-based ROM<sup>1</sup>, you'll never have to make compromises between one that fully works on your device yet with customization options to make your phone truly yours.
+                        </p>
+                        <!-- <a href="#" class="btn btn-primary">Learn more</a> -->
+                    </div>
+                    <div class="col-md-6 order-1 order-md-2">
+                        <img src="/assets/images/Feature-1.png" class="img-fluid d-block mx-auto" alt="iMac"/>
+                    </div>
+                </div>
+
+                <div class="row mt-7">
+                    <div class="col-md-6">
+                        <img src="/assets/images/Feature-2.png" class="img-fluid d-block mx-auto" alt="MacBook"/>
+                    </div>
+                    <div class="col-md-6 my-md-auto">
+                        <h2 class="font-weight-light font-brand">A camera that <b class="font-weight-bold">surpasses itself</b></h2>
+                        <p class="text-description">
+                            Powered by the latest HDR and "high resolution" technology from ArcSoft<sup>&reg;</sup>, Fresh's camera enhances photos on the fly, bringing more dynamic range<sup>2</sup> to the moments you capture in life.
+                            </br></br>
+                            Plus, get creative with features such as Fun Mode, Single Take, and AR Emoji. Taking photos has never been this fun yet easy until now.
+                        </p>
+                        <!-- <a href="#" class="btn btn-primary">Learn more</a> -->
+                    </div>
+                </div>
+
+                <div class="row my-5">
+                    <div class="col-md-6 order-2 order-md-1 my-md-auto">
+                        <h2 class="font-weight-light font-brand">Cares for you, <b class="font-weight-bold">and itself</b></h2>
+                        <p class="text-description">
+                            Suit your device with your lifestyle with Digital Wellbeing and Routines. Automate your life from turning on the vaccuum cleaner when you leave your home, to turning off the lights as soon as you fall asleep. Remind you to give your eyes a rest and even remind you of your listening habits.
+                            </br></br>
+                            When it's time to do awesome things, Device Care, Mint Kernel, and Fresh's Performance Modes will take care in optimizing your device so you can do more without having to fiddle with settings.
+                        </p>
+                        <!-- <a href="#" class="btn btn-primary">Learn more</a> -->
+                    </div>
+                    <div class="col-md-6 order-1 order-md-2">
+                        <img src="/assets/images/Feature-3.png" class="img-fluid d-block mx-auto" alt="iMac"/>
+                    </div>
+                </div>
+
+                <div class="row mt-7">
+                    <div class="col-md-6">
+                        <img src="/assets/images/Feature-4.png" class="img-fluid d-block mx-auto" alt="MacBook"/>
+                    </div>
+                    <div class="col-md-6 my-md-auto">
+                        <h2 class="font-weight-light font-brand">Amazing things await <b class="font-weight-bold">with just a tap</b></h2>
+                        <p class="text-description">
+                            Fresh has made it easier to get awesome stuff without having to be even tethered to a PC. From Zest to over-the-air software updates, it's now effortless to get new stuff that will make your device even more awesome.
+                            </br></br>
+                            Simply check for updates, install, and bam! You'll have the latest version of Fresh in no time.
+                        </p>
+                        <!-- <a href="#" class="btn btn-primary">Learn more</a> -->
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!--pricing section-->
+        <section class=" pt-6" id="download">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 mx-auto">
+                        <h2 class="font-weight-bold font-brand dot-circle">Easy to love, easy to install</h2>
+                        <p class="text-description lead">Get Fresh for your device today.</p>
+                        <div class="row pricing-table mt-2">
+                            <div class="col-sm-5">
+                                <ul class="list-unstyled pricing-list">
+                                    <li class="mt-6 mb-6">
+                                        <h2 class="font-brand">Supported Devices</h2>
+                                        <ul class="list-small">
+                                            <li class="small-xl">Samsung Galaxy A50 (International)</li>
+                                        </ul>
+                                    </li>
+                                    <li class="mb-5">
+                                        <h6 class="font-brand">Coming from official software?</h6>
+                                        <p class="text-description small-xl">Start using Fresh by visiting the wiki <a href="https://wiki.fresh.tenseventyseven.cf/">here</a>.</p>
+                                    </li>
+                                    <li>
+                                        <h6 class="font-brand">Coming from a custom firmware?</h6>
+                                        <p class="text-description small-xl">See installation instructions <a href="https://wiki.fresh.tenseventyseven.cf/getting-started/installing-a-custom-firmware/installing-fresh">here</a>.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6 ml-auto">
+                                <div class="card bg-primary">
+                                    <div class="card-body text-center">
+                                        <span class="font-brand">
+                                            <img class="img-fluid" src="/assets/images/fresh_brand_logo.svg" style="width: 6em;" />
+                                        </span>
+                                        <h2 class="font-brand text-white">Get Fresh for your device</h2>
+                                        <p class="text-light">Fresh 4.4.2 Release</p>
+                                        <div class="d-block mt-6">
+                                            <a href="https://tnsvn.cf/fresh/latest" class="btn btn-outline-light btn-lg mt-2 mb-2">
+                                                <i class="fa-brands fa-osi mr-2"></i>
+                                                SourceForge
+                                            </a>
+                                            <div class="d-block btn-group-sm">
+                                                <a href="https://tnsvn.cf/fresh/drive" class="btn btn-outline-light btn-sm mr-1 mt-2">
+                                                    <i class="fa-brands fa-google-drive mr-2"></i>
+                                                    Google Drive
+                                                </a>
+
+                                                <a href="https://tnsvn.cf/fresh/mega" class="btn btn-outline-light btn-sm ml-1 mt-2">
+                                                    <span class="mr-2" data-feather="download" width="14" height="14"></span>
+                                                    MEGA
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--help section-->
+        <section class=" mt-7" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 mx-auto">
+                        <h2 class="font-weight-bold font-brand dot-circle">Need help?</h2>
+                        <p class="text-description lead">We'd love to answer your questions.</p>
+                        <div class="row mt-5 card-contacts">
+                            <div class="col-md-6 mb-3">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <div class="icon-box">
+                                            <a href="https://discord.gg/AfV5VWDCDD">
+                                                <div class="icon-box-inner small-xs text-primary">
+                                                    <i class="fa-brands fa-discord fontawesome-circle"></i>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <h5 class="font-brand">Join the Community</h5>
+                                        <p class="text-description text-center small-xl">Developers and users can easily help you through the Fresh Project's official Discord server.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <div class="icon-box">
+                                            <a href="https://github.com/FreshROMs">
+                                                <div class="icon-box-inner small-xs text-primary">
+                                                    <i class="fa-brands fa-github fontawesome-circle"></i>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <h5 class="font-brand">File an Issue</h5>
+                                        <p class="text-description text-center small-xl">File an issue through Fresh's official GitHub repositories.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-5">
+                            <div class="col-md-6 mb-5">
+                                <h6 class="font-brand">Do I need to install anything else after installing Fresh?</h6>
+                                <p class="text-description">
+                                    <b>There is no need!</b> Fresh is already pre-patched for optimal use on your device. Simply Reboot to the <b>System</b> after installing Fresh.
+                                </p>
+                            </div>
+                            <div class="col-md-6 mb-5">
+                                <h6 class="font-brand">How do I update my Fresh installation?</h6>
+                                <p class="text-description">
+                                    <b>It's very easy!</b> Simply go to <b>Settings</b>, tap <b>Software update</b>, tap <b>Download and install</b>, and wait for updates to be installed (if any).
+                                </p>
+                            </div>
+                            <div class="col-md-6 mb-5">
+                                <h6 class="font-brand">Do you track my usage?</h6>
+                                <p class="text-description">
+                                    Fresh's services include analytics from CloudFlare and Google Analytics in order to optimize them for future releases. <b>No personally-identifiable information is sent to Fresh.</b>
+                                </p>
+                            </div>
+                            <div class="col-md-6 mb-5">
+                                <h6 class="font-brand">How often do you release updates?</h6>
+                                <p class="text-description">
+                                    Fresh follows the <b>"it's released as long as ready"</b> model, with updates being released once it has passed testing. Depending on schedule, this can take a day up to a few weeks.
+                                </p>
+                            </div>
+                            <div class="col-md-6 mb-5">
+                                <h6 class="font-brand">I'm a developer and would like to help.</h6>
+                                <p class="text-description">
+                                    <b>Developers and contributors are welcome!</b> Simply file a Pull Request on Fresh's repositories or join the community.
+                                </p>
+                            </div>
+                            <div class="col-md-6 mb-5">
+                                <h6 class="font-brand">I have more questions.</h6>
+                                <p class="text-description">
+                                    Visit the Fresh Wiki <a href="https://tnsvn.cf/fresh/wiki">here</a> for more information on Fresh's features and more.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--footer / contact-->
+        <footer class="mt-5 mb-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 my-auto text-center text-md-left">
+                        The Fresh Project
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <ul class="list-inline social social-white-alt social-rounded social-sm mb-0">
+                            <li class="list-inline-item">
+                                <a href="https://github.com/FreshROMs"><i class="fa-brands fa-github"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://gitlab.com/FreshROMs"><i class="fa-brands fa-gitlab"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://twitter.com/TenSeventy7"><i class="fa-brands fa-square-twitter"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://techhub.social/@TenSeventy7"><i class="fa-brands fa-mastodon"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 text-center text-md-right mb-0">
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><a href="https://wiki.fresh.tenseventyseven.cf/">Wiki</a></li>
+                            <!-- <li class="list-inline-item"><a href="#">Thanks</a></li> -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12 text-muted text-center small">
+                        2021-<script>document.write(/\d{4}/.exec(Date())[0])</script> tenseventyseven - All Rights Reserved
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!--video section-->
+        <section class="video-wrapper">
+            <div class="video-close" id="video-close">
+                <em data-feather="x" class="icon"></em>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 mx-auto my-auto">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item allowfullscreen" 
+                                    src="https://www.youtube.com/embed/MGsalg2f9js?rel=0&amp;controls=0&amp;showinfo=0" 
+                                    allowfullscreen="" frameborder="0" height="415" width="100%">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--scroll to top-->
+        <div class="scroll-top">
+            <em class="mt-2 text-center" data-feather="arrow-up" width="24" height="24"></em>
+        </div>
+
+        <!-- theme switcher (FOR DEMO ONLY - REMOVE FROM PRODUCTION)
+        <div class="switcher-wrap">
+            <div class="switcher-trigger">
+                <span class="fa fa-gear"></span>
+            </div>
+            <div class="color-switcher">
+                <h6>Color Switcher</h6>
+                <ul class="mt-3 clearfix">
+                    <li class="bg-cyan active" data-color="default" title="Default Cyan"></li>
+                    <li class="bg-orange" data-color="orange" title="Orange"></li>
+                    <li class="bg-blue" data-color="blue" title="Blue"></li>
+                    <li class="bg-red" data-color="red" title="Red"></li>
+                    <li class="bg-indigo" data-color="indigo" title="Indigo"></li>
+                    <li class="bg-green" data-color="green" title="Green"></li>
+                    <li class="bg-black" data-color="black" title="Black"></li>
+                    <li class="bg-teal" data-color="teal" title="Teal"></li>
+                    <li class="bg-purple" data-color="purple" title="Purple"></li>
+                    <li class="bg-pink" data-color="pink" title="Pink"></li>
+                </ul>
+                <p>These are just demo colors. You can <b>easily</b> create your own color scheme.</p>
+            </div>
+        </div>-->
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.5.0/feather.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
         <script src="js/scripts.js"></script>
     </body>
 </html>

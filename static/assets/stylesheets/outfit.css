@@ -1,0 +1,41 @@
+/* outfit-light */
+@font-face {
+	font-family: Outfit;
+	font-style: normal;
+	font-weight: 300;
+	src: local("Outfit Light"), local("Outfit-Light"), url('/assets/fonts/outfit/outfit-light.woff2') format("woff2"), url('/assets/fonts/outfit/outfit-light.woff') format("woff");
+	font-display: auto;
+}
+/* outfit-regular */
+@font-face {
+	font-family: Outfit;
+	font-style: normal;
+	font-weight: 400;
+	src: local("Outfit Regular"), local("Outfit-Regular"), url('/assets/fonts/outfit/outfit-regular.woff2') format("woff2"), url('/assets/fonts/outfit/outfit-regular.woff') format("woff");
+	font-display: auto;
+}
+/* outfit-medium */
+@font-face {
+	font-family: Outfit;
+	font-style: normal;
+	font-weight: 500;
+	src: local("Outfit Medium"), local("Outfit-Medium"), url('/assets/fonts/outfit/outfit-medium.woff2') format("woff2"), url('/assets/fonts/outfit/outfit-medium.woff') format("woff");
+	font-display: auto;
+}
+/* outfit-semibold */
+@font-face {
+	font-family: Outfit;
+	font-style: normal;
+	font-weight: 400;
+	src: local("Outfit SemiBold"), local("Outfit-SemiBold"), url('/assets/fonts/outfit/outfit-semibold.woff2') format("woff2"), url('/assets/fonts/outfit/outfit-semibold.woff') format("woff");
+	font-display: auto;
+}
+/* outfit-bold */
+@font-face {
+	font-family: Outfit;
+	font-style: normal;
+	font-weight: 700;
+	src: local("Outfit Bold"), local("Outfit-Bold"), url('/assets/fonts/outfit/outfit-bold.woff2') format("woff2"), url('/assets/fonts/outfit/outfit-bold.woff') format("woff");
+	font-display: auto;
+}
+
