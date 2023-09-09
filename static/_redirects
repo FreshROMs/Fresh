@@ -1,3 +1,5 @@
 # http and https need separate rules if you don’t force_ssl!
 http://fresh.tenseventyseven.cf/* https://fresh.tenseventyseven.xyz/:splat 301!
 https://fresh.tenseventyseven.cf/* https://fresh.tenseventyseven.xyz/:splat 301!
+http://wiki.fresh.tenseventyseven.cf/* https://fresh.tenseventyseven.xyz/:splat 301!
+https://wiki.fresh.tenseventyseven.cf/* https://fresh.tenseventyseven.xyz/:splat 301!
